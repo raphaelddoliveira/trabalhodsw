@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1c1f26; /* Fundo escuro mais moderno */
+  margin: 0;
+  padding: 0;
+  color: #e0e0e0; /* Texto claro para contraste */
+}
+
+.container {
+  padding: 2rem;
+  background-color: #2a2e37; /* Container mais escuro */
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra mais marcante */
+  border-radius: 0.75rem;
+}
+
+.btn-effect {
+  position: relative;
+  overflow: hidden;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color: #0a7aeb; /* Botão com fundo mais escuro */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-effect:hover {
+  background-color: #5a6268; /* Efeito de hover mais suave */
+  transform: translateY(-2px); /* Efeito de elevação no hover */
+}
+
+.btn-effect:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(72, 84, 96, 0.5); /* Acessibilidade: foco */
+}
+
+.btn-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(233, 23, 23, 0.1);
+  transition: all 0.5s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.btn-effect:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+
+.bg-success {
+  background-color: rgb(56, 58, 175) !important; 
+  color: #fff;
+}
+
+.form-control-lg {
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  background-color: #8b8c8d; /* Fundo mais escuro no input */
+  color: #fff; /* Texto claro para contraste */
+  border-radius: 0.5rem;
+  border: 1px solid #4e555b;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control-lg:focus {
+  border-color: #17a2b8;
+  box-shadow: 0 0 5px rgba(23, 162, 184, 0.5); /* Brilho de foco sutil */
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  border-color: #004085;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #001885;
+  transform: translateY(-2px); /* Efeito de hover com elevação */
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  color: #343a40;
+  border: 1px solid #6c757d;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #dae0e5;
+  border-color: #adb5bd;
+}
+
+.btn-light:focus {
+  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .btn-effect {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}

@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div *ngIf="!formSubmitted" class="border rounded-lg shadow-lg bg-light p-5">
+    <h2 class="text-center mb-4 text-primary">Cadastro de Usuário</h2>
+    <form [formGroup]="Form" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label for="primeiroNome" class="form-label">Primeiro Nome</label>
+        <input id="primeiroNome" formControlName="primeiroNome" type="text" class="form-control form-control-lg" placeholder="Digite o primeiro nome" />
+      </div>
+      <div class="mb-4">
+        <label for="segundoNome" class="form-label">Segundo Nome</label>
+        <input id="segundoNome" formControlName="segundoNome" type="text" class="form-control form-control-lg" placeholder="Digite o segundo nome" />
+      </div>
+      <div class="mb-4">
+        <label for="endereco" class="form-label">Endereço</label>
+        <input id="endereco" formControlName="endereco" type="text" class="form-control form-control-lg" placeholder="Digite o endereço" />
+      </div>
+      <div class="mb-4">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input id="telefone" formControlName="telefone" type="tel" class="form-control form-control-lg" placeholder="Digite o telefone" />
+      </div>
+      <div class="mb-4">
+        <label for="email" class="form-label">E-mail</label>
+        <input id="email" formControlName="email" type="email" class="form-control form-control-lg" placeholder="Digite o e-mail" />
+      </div>
+      <div class="mb-4">
+        <label for="observacao" class="form-label">Observação</label>
+        <input id="observacao" formControlName="observacao" type="text" class="form-control form-control-lg" placeholder="Digite observações" />
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg w-100 btn-effect">Concluir</button>
+    </form>
+  </div>
+
+  <div *ngIf="formSubmitted" class="text-center mt-5 p-4 border rounded-lg shadow-lg bg-success text-white">
+    <h2 class="mb-3">Cadastro Concluído!</h2>
+    <p class="lead mb-4">O usuário foi cadastrado com sucesso.</p>
+  </div>
+</div>

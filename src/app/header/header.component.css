@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos para o Header */
+header {
+  font-family: 'Roboto', sans-serif;
+  background-color: #2b2d2f; /* Cor mais escura e moderna */
+  color: #ffffff; 
+  padding: 2.5rem 0; /* Mais espaçamento para criar destaque */
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Sombra com mais profundidade */
+  position: relative;
+  border-bottom: 3px solid #007bff; /* Linha de destaque para separar o header */
+}
+
+header h1 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem; /* Maior espaçamento entre título e subtítulo */
+  font-weight: bold;
+  letter-spacing: 0.05rem; /* Suave espaçamento entre letras para modernidade */
+  color: #f8f9fa;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 0; 
+  font-weight: 300;
+  color: #adb5bd; /* Subtítulo mais claro para contraste */
+}
+
+.container {
+  max-width: 1000px; 
+  margin: 0 auto; 
+  padding: 2rem; /* Espaçamento maior nas laterais */
+  background-color: #343a40; /* Fundo do container escuro para contraste */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bg-primary {
+  background-color: #6c757d; /* Cor mais suave e neutra */
+}
+
+.text-white {
+  color: #ffffff; 
+}
+
+.shadow-lg {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Sombra mais profunda */
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Melhorias de Responsividade */
+@media (max-width: 768px) {
+  header {
+    padding: 2rem 0;
+  }
+
+  header h1 {
+    font-size: 2.25rem; /* Ajuste do título em dispositivos menores */
+  }
+
+  header p {
+    font-size: 1rem; 
+  }
+
+  .container {
+    padding: 1.5rem; /* Reduz o padding no container */
+  }
+}
+
+/* Estilo de foco para acessibilidade */
+header h1:focus, 
+header p:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+  transition: outline 0.3s ease;
+}
